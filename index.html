@@ -1,116 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv=”refresh” content=”5;url=’https://www.cnblogs.com/tianji73/’” > -->
-    <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-             /* flex-direction: column; */
-            justify-content: center;
-            align-items: center; 
-            background-color: #000;
-        }
-        a {
-            position: relative;
-            width: 140px;
-            height: 60px;
-            text-align: center;
-            line-height: 60px;
-            margin: 45px;
-            text-decoration: none;
-            color: aqua;
-            font-size: 30px;
-            padding: 0 20px;
-            text-transform: uppercase;
-            transition: 0.5s;
-            overflow: hidden;
-            -webkit-box-reflect: below 1px linear-gradient(transparent, #1113);
-        }
-       
-        a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 20px;
-            height: 20px;
-            border-top: 2px solid aqua;
-            border-left: 2px solid aqua;
-            transition: 0.5s;
-            transition-delay: 0.5s;
-        }
-        a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 20px;
-            height: 20px;
-            border-bottom: 2px solid aqua;
-            border-right: 2px solid aqua;
-            transition: 0.5s;
-            transition-delay: 0.5s;
-        }
-        a:hover::before, a:hover::after {
-            width: 100%;
-            height: 100%;
-            transition-delay: 0s;
-        }
-        a:hover {
-            background-color: aqua;
-            color: #000;
-            box-shadow: 0 0 50px #21ebff;
-            transition-delay: 0.3s;
-        }
-        a:nth-child(1) {
-            filter: hue-rotate(150deg);
-        }
-        a:nth-child(3) {
-            filter: hue-rotate(270deg);
-        }
-        a:nth-child(4) {
-            filter: hue-rotate(400deg);
-        }
-        a:nth-child(5) {
-            filter: hue-rotate(70deg);
-        }
-    </style>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+
+<title>天基系统【搭建中】</title>
+
+<!--==== bootstrap ====-->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!--==== font-awesome ====-->
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<!--==== owl-carousel ====-->
+<link href="css/owl.carousel.css" rel="stylesheet">
+<!--==== magnific-popup ====-->
+<link href="css/magnific-popup.css" rel="stylesheet">
+<!--==== animate css ====-->
+<link href="css/animate.min.css" rel="stylesheet">
+
+<!--==== style css ====-->
+<link href="css/style.css" rel="stylesheet">
+<!--==== responsive css ====-->
+<link href="css/responsive.css" rel="stylesheet">
+
+<!--==== jquery ====-->
+<script src="js/jquery-2.1.4.min.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="js/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
 </head>
 <body>
 
-        
-    <div class="container">
-          
+<!--==== DEMO COLOR PANEL =====-->
+<div class="demo_panel_box">
+  <div class="color_panel_box">
+	 <div class="spiner_button slide_in_out"><i class="fa fa-cog fa-spin"></i></div>
+	  <span class="red_color"></span>
+	  <span class="blue_color"></span>
+	  <span class="yellow_color"></span>
+	  <span class="purple_color"></span>
+	  <span class="pink_color"></span>
+	  <span class="green_color"></span>
+  </div>
+</div>
+<!--==== DEMO COLOR PANEL ===-->
 
-        <a href="https://www.cnblogs.com/tianji73/">简介说明</a>
-        <a href="#">博客系统</a>
-        <a href="#">后台系统</a>
-        <a href="#">知识体系</a>
-        <!-- <a href="#">影音库</a>
-        <a href="#">后台管理</a> -->
+
+<!--===== Preloader ====-->
+<div class="preloader">
+	<div class="spinner">
+	  <div class="double-bounce1"></div>
+	  <div class="double-bounce2"></div>
+	</div>
+</div>
+
+
+ <!--=====****************** INTRO SECTION ****************************=====-->
+<div id="home" class="intro-section">
+
+ <!--===== HEADER AREA =====-->
+	<header class="navbar custom-navbar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-3 col-xs-12">
+					<div class="logo">
+					   <div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<a href="#home">SPACE-BASED SYSTEM</a> <!--== logo ==-->
+					</div>
+				</div>
+				
+				<div class="col-md-9 col-sm-9 col-xs-12">
+				   <nav class="main-menu">
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav"> <!--== manin menu ==-->
+							<li class="active smooth-scroll"><a class="theme-color" href="#home">Home</a></li>
+							<li class="smooth-scroll"><a class="theme-color" href="#about">About</a></li>
+							<li class="smooth-scroll"><a class="theme-color" href="#services">service</a></li>
+							<li class="smooth-scroll"><a class="theme-color" href="#portfolio">work</a></li>
+							<li class="smooth-scroll"><a class="theme-color" href="#contact">contact</a></li>
+						</ul>
+					</div>
+					</nav>
+				</div>
+				
+			</div>
+		   
+		</div>
+	</header>
+<!--===== END HEADER AREA ======-->
+	 
+<!--======= WELCOME AREA =======-->
+	<div class="welcome-area">
+	  <div id="particles-js"></div>
+	   <div class="welcome-table">
+		   <div class="welcome-cell">
+				<div class="container">
+					<div class="row">
+					   
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="welcome-text text-center">
+								
+								<h1 style="color: aqua;">Space-based SYSTEM</h1>
+								<h1 ><span class="theme-color">天基系统</span></h1>
+								<h4>designed by He Hu</span></h4>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="#about" class="scroll-btn banner-icon theme-color"><i class="fa fa-angle-double-down"></i></a>
+	</div>
+	<!--===== END WELCOME AREA =====-->
+	
+</div>
+<!--=====***************** END INTRO SECTION ***********************=====-->
 
 
 
-        <!-- <a href="https://www.cnblogs.com/tianji73/">简介说明</a>
-        <a href="#">科技库</a>
-        <a href="#">文学库</a>
-        <a href="#">艺术库</a>
-        <a href="#">影音库</a>
-        <a href="#">后台管理</a> -->
-    </div>
-    <!-- <script type="text/javascript">
 
-        　　setTimeout("window.location=('index.php'",9000);
-        
-        </script> -->
+<!--======**************** SERVICES SECTION ******************=======-->
+<section id="services" class="services-section section-padding">
+
+	<div class="container">
+	   <div class="row">
+		<div class="col-md-12">
+			<div class="section-title">
+				<h2><span class="theme-color">If I have seen further, it is by standing on the shoulders of giants.</span> 站在巨人的肩膀上</h2>
+				<h4><span style="color: rgb(226, 204, 174);">今天我们已步入信息时代、更应放出眼光，自己有选择的来拿，站在前人取得的成就的基础上获得新的成就。</span></h4>
+			</div>
+		</div>
+	</div>
+		<div class="row">
+			
+			
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<div class="single-services text-center wow fadeInUp" data-wow-delay="0.2s">
+					<div class="servise-icon">
+						<!-- <i class="fa fa-pencil-square"></i> -->
+						<img src="images/马克思.jpg" >
+					</div>
+					<h4>Karl Heinrich Marx</h4>
+					<p>卡尔·马克思，全名卡尔·海因里希·马克思（德语：Karl Heinrich Marx，1818年5月5日－1883年3月14日），马克思主义的创始人之一，第一国际的组织者和领导者，马克思主义政党的缔造者之一，全世界无产阶级和劳动人民的革命导师，无产阶级的精神领袖，国际共产主义运动的开创者。</p>
+				</div>
+			</div>
+			
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<div class="single-services text-center wow fadeInUp" data-wow-delay="0.4s">
+					<div class="servise-icon">
+						<!-- <i class="fa fa-codepen"></i> -->
+						<img src="images/孔子.jpg" >
+					</div>
+					<h4>孔子</h4>
+					<p>孔子（公元前551年-公元前479年4月11日），子姓，孔氏，名丘，字仲尼，春秋时期鲁国陬邑（今山东省曲阜市）人，中国古代伟大的思想家、政治家、教育家，儒家学派创始人、“大成至圣先师”。</p>
+				</div>
+			</div>
+			
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<div class="single-services last-service text-center wow fadeInUp" data-wow-delay="0.6s">
+					<div class="servise-icon">
+						<!-- <i class="fa fa-laptop"></i> -->
+						<img src="images/牛顿.jpg" >
+					</div>
+					<h4>Isaac Newton</h4>
+					<p>艾萨克·牛顿（1643年1月4日—1727年3月31日），爵士，英国皇家学会会长，英国著名的物理学家、数学家，百科全书式的“全才”，著有《自然哲学的数学原理》、《光学》。创立了力学体系、发明了微积分和在光学上发明了反射望远镜，提出了颜色理论。</p>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+</section>
+<!--======*************** END SERVICES SECTION ****************=======-->
+
+
+<!--=====************** ABOUT SECTION ***************=====-->
+<section id="about" class="about-section section-padding">
+	<div class="container">
+		<div class="row">
+		   
+			<div class="col-md-4">
+			   <div class="author-image wow fadeInLeft" data-wow-delay="0.4s">
+					<img src="images/author.jpg" alt="Author Image"> <!--=== author image ===-->
+				
+				<div class="social-icon theme-color"> <!--=== author social icons ===-->
+						<a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+						<a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+						<a href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
+						<a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+						<a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
+						<a href="#" target="_blank"><i class="fa fa-youtube-play"></i></a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-8">
+			   <div class="about-text wow fadeInRight" data-wow-delay="0.4s">
+					<h3>关于作者</h3>
+					<p>何虎，中共党员，毕业于兰州工业学院，软件工程专业。主要编程语言为Python、Java、C、HTML、JS、CSS，一个爱好广泛且略懂计算机科学与艺术的程序员与画家。</p>
+					<p>He Hu, a member of the Communist Party of China, graduated from Lanzhou Institute of Technology and majored in software engineering. The main programming languages are Python, Java, C, HTML, JS, CSS, a programmer and painter with extensive hobbies and some knowledge of computer science and art.</p>
+					<!-- <a class="btn theme-color" href="#"><i class="fa fa-download"></i> download resume</a> <a class="scroll-btn btn extra" href="#portfolio">see work</a> -->
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</section>
+<!--=====*********** END ABOUT SECTION **************=====-->
+
+
+
+
+
+<!--QUOTES AREA-->
+<!-- <div id="quotes" class="quotes-area section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="quotes-content text-center">
+				   <h3>站在巨人的肩膀上</h3>
+					<p>If I have seen further, it is by standing on the shoulders of giants.</p>
+					<a class="scroll-btn btn theme-color" href="#contact">Get Quotes</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+<!--END QUOTES AREA-->
+
+
+<!--======********** PORTFOLIO SECTION *********======-->
+<section id="portfolio" class="section-padding">
+<div class="container">
+	<div class="row">
+			<div class="col-md-12">
+				<div class="section-title">
+					<h2><span class="theme-color">Document my life</span> 记录生活</h2>
+				</div>
+			</div>
+		</div>
+
+	<div class="row">
+		<div class="col-md-4 col-sm-6 single-work">
+			<a href="images/portfolio/item1.jpg" class="image-popup">
+			<img src="images/portfolio/item1.jpg" alt="">
+			<div class="itemHover">
+				<div class="work-table">
+					<div class="table-cell">
+						<div class="hover-content">
+							<i class="fa fa-camera"></i>
+							<h6>2022年2月拍摄于北京地坛</h6>
+							<h6>点击放大</h6>
+						</div>
+					</div>
+				</div>
+			  </div>
+			</a>
+		</div>   
+
+		<div class="col-md-4 col-sm-6 single-work">
+			<a href="images/portfolio/item2.jpg" class="image-popup">
+				<img src="images/portfolio/item2.jpg" alt="">
+					<div class="itemHover">
+					<div class="work-table">
+						<div class="table-cell">
+							<div class="hover-content">
+								<i class="fa fa-camera"></i>
+								<h6>Category / Identity</h6>
+							</div>
+						</div>
+					</div>
+				  </div>
+			</a>
+		</div>  
+
+		<div class="col-md-4 col-sm-6 single-work">
+			<a href="images/portfolio/item3.jpg" class="image-popup">
+				<img src="images/portfolio/item3.jpg" alt="">
+			   <div class="itemHover">
+					<div class="work-table">
+						<div class="table-cell">
+							<div class="hover-content">
+								<i class="fa fa-camera"></i>
+								<h6>Category / Identity</h6>
+							</div>
+						</div>
+					</div>
+				  </div>
+			</a>
+		</div>  
+
+		<div class="col-md-4 col-sm-6 single-work">
+			<a href="images/portfolio/item4.jpg" class="image-popup">
+				<img src="images/portfolio/item4.jpg" alt="">
+				<div class="itemHover">
+					<div class="work-table">
+						<div class="table-cell">
+							<div class="hover-content">
+								<i class="fa fa-camera"></i>
+								<h6>Category / Identity</h6>
+							</div>
+						</div>
+					</div>
+				  </div>
+			</a>
+		</div>  
+		
+		<div class="col-md-4 col-sm-6 single-work">
+			<a href="images/portfolio/item5.jpg" class="image-popup">
+				<img src="images/portfolio/item5.jpg" alt="">
+				<div class="itemHover">
+					<div class="work-table">
+						<div class="table-cell">
+							<div class="hover-content">
+								<i class="fa fa-camera"></i>
+								<h6>Category / Identity</h6>
+							</div>
+						</div>
+					</div>
+				  </div>
+			</a>
+		</div>  
+
+		<div class="col-md-4 col-sm-6 single-work">
+			<a href="images/portfolio/item6.jpg" class="image-popup">
+				<img src="images/portfolio/item6.jpg" alt="">
+				<div class="itemHover">
+					<div class="work-table">
+						<div class="table-cell">
+							<div class="hover-content">
+								<i class="fa fa-camera"></i>
+								<h6>Category / Identity</h6>
+							</div>
+						</div>
+					</div>
+				  </div>
+			</a>
+		</div>  
+
+	</div><!--/.row-->
+</div><!--/.container-->
+</section>
+<!--======************ END PORTFOLIO SECTION **************======-->
+
+
+<!--======**************** REVIEW SECTION *****************========-->
+<div id="review" class="review-section section-padding">
+	<div class="container">
+	   <div class="row">
+			<div class="col-md-12">
+				<div class="section-title">
+					<h2><span class="theme-color">Here's what others say about me</span> Reviews</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				 <div class="review-full-area">
+				   <div class="review-list">
+					<div class="single-review"> <!-- start single carousel item -->
+						<div class="review-content">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</div>
+						<h5 class="author"> Paul Flavius. <span>CEO Devsoft Inc</span></h5>
+					</div> <!-- end single carousel item -->
+					<div class="single-review"> <!-- start single carousel item -->
+						<div class="review-content">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</div>
+						<h5 class="author"> Paul Flavius,<span>CEO Devsoft Inc</span></h5>
+					</div> <!-- end single carousel item -->
+					<div class="single-review"> <!-- start single carousel item -->
+						<div class="review-content">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</div>
+						<h5 class="author"> Paul Flavius,<span>CEO Devsoft Inc</span></h5>
+					</div> <!-- end start single carousel item -->
+					<div class="single-review"> <!-- start single carousel item -->
+						<div class="review-content">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						</div>
+						<h5 class="author"> Paul Flavius,<span>CEO Devsoft Inc</span></h5>
+					</div> <!-- end start single carousel item -->
+				</div>
+					</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!--======************* END REVIEW SECTION ***************========-->
+
+
+<!--======******************** CONTACT INFO SECTION **********************======-->
+  <section id="contact" class="contact-area section-padding">
+<div class="container">
+   <div class="row">
+			<div class="col-md-12">
+				<div class="section-title">
+					<h2><span class="theme-color">点击以下图标以进入</span>系统导航</h2>
+				</div>
+			</div>
+		</div>
+	
+</div>
+</section>
+<!--======**************** END CONTACT INFO SECTION ********************======-->
+
+
+
+<div class="row">
+			
+			
+	<div class="col-md-4 col-sm-4 col-xs-12">
+		<div class="single-services text-center wow fadeInUp" data-wow-delay="0.2s">
+			<div class="servise-icon">
+				<i class="fa fa-pencil-square"></i>
+			</div>
+			<h4>Karl Heinrich Marx</h4>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>
+	</div>
+	
+	<div class="col-md-4 col-sm-4 col-xs-12">
+		<div class="single-services text-center wow fadeInUp" data-wow-delay="0.4s">
+			<div class="servise-icon">
+				<!-- <i class="fa fa-codepen"></i> -->
+				<img src="images/系统图标.png"  >
+			</div>
+			<h4>天基系统</h4>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>
+	</div>
+	
+	<div class="col-md-4 col-sm-4 col-xs-12">
+		<div class="single-services last-service text-center wow fadeInUp" data-wow-delay="0.6s">
+			<div class="servise-icon">
+				<i class="fa fa-laptop"></i>
+			</div>
+			<h4>爱因斯坦</h4>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>
+	</div>
+	
+</div>
+
+
+
+
+
+
+<!--======******************* FOOTER SECTION ******************======-->
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+			   <div class="footer-text wow fadeInUp" data-wow-delay="0.4s">
+					<p>Copyright &copy; 2023.He Hu All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!--======******************* END FOOTER SECTION ***************======-->
+
+
+<!--==== plugins js ====-->
+<script src="js/plugins.js"></script>
+<!--==== magnific-popup-options js ====-->
+<script src="js/magnific-popup-options.js"></script>
+<!--==== validator js ====-->
+<script src="js/validator.min.js"></script>
+<!--==== particles js ====-->
+<script src="js/particles.min.js"></script>
+<!--==== app js ====-->
+<script src="js/app.js"></script>
+<!--==== app js ====-->
+<script src="js/wow-1.3.0.min.js"></script>
+<!--==== main js ====-->
+<script src="js/main.js"></script>
 </body>
 </html>
